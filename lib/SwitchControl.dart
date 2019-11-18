@@ -21,6 +21,13 @@ class _SwitchControlState extends State<SwitchControl> {
       body: Column(
         children: <Widget>[
           SizedBox(height: 50.0,),
+          Padding(
+            padding: const EdgeInsets.all(20.0),
+            child: Text('This demo also shows Cupertino Activity Indicator',
+                 style: TextStyle(color: CupertinoColors.darkBackgroundGray,
+                                  fontSize: 25.0,
+                                  fontWeight: FontWeight.bold),),
+          ),
           Semantics(
             container: true,
             child: Row(

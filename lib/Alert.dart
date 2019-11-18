@@ -4,21 +4,20 @@ import 'package:flutter/material.dart';
 class Alert extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
-    return CupertinoPageScaffold(
-      navigationBar: CupertinoNavigationBar(
-        middle: const Text('Alerts'),
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Alerts'),
       ),
 
-    child: Column(
-      crossAxisAlignment: CrossAxisAlignment.center,
+    body: Column(
       mainAxisAlignment: MainAxisAlignment.center,
       children: <Widget>[
         Padding(
           padding: const EdgeInsets.all(20.0),
-          child: Text('This demo shows Cupertino Button examples',
+          child: Text('This demo also shows Cupertino Button examples',
                 style: TextStyle(fontWeight: FontWeight.bold,
                                  fontSize: 25.0,
-                                 color: Colors.deepPurple),),
+                                 color: CupertinoColors.darkBackgroundGray),),
         ),
         Padding(
           padding: const EdgeInsets.all(20.0),
@@ -101,7 +100,7 @@ void showAlertDialog(BuildContext context){
             isDefaultAction: true,
             onPressed: (){
               Navigator.pop(context);
-              showActionSheet(context);
+              //showActionSheet(context);
             },
           )
         ],

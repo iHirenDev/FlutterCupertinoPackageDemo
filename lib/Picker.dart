@@ -10,6 +10,7 @@ class Picker extends StatelessWidget{
       ),
 
       body: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
           Padding(
             padding: const EdgeInsets.all(20.0),

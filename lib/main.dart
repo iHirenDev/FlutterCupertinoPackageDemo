@@ -20,7 +20,23 @@ class CupertinoDemo extends StatelessWidget{
     return Scaffold(
       appBar: AppBar(
         title: Text('Cupertino Demo')),   
-        body: CupertinoWidgetList(),
+        body: Column(
+          children: <Widget>[
+            Padding(
+              padding: const EdgeInsets.all(30.0),
+              child: Text('Cupertino Widgets Demo',
+                   style: TextStyle(fontWeight: FontWeight.bold,
+                                    fontSize: 25.0,
+                                    color: CupertinoColors.darkBackgroundGray),),
+            ),
+            
+            
+            Divider(color: CupertinoColors.black,),
+            Expanded(
+              child: CupertinoWidgetList(),
+            ),
+          ],
+        )
     );
   }
 }
@@ -81,9 +97,9 @@ Widget _widgetList(BuildContext context){
                 style: TextStyle(fontSize: 25.0,
                                 fontWeight: FontWeight.bold)),
         trailing: Icon(Icons.keyboard_arrow_right),
-        onTap: (){
+        /*onTap: (){
           Navigator.push(context, MaterialPageRoute(builder: (context) => SwitchControl()));
-        },
+        },*/
       ),
       Divider(),
       ListTile(
@@ -91,9 +107,9 @@ Widget _widgetList(BuildContext context){
                 style: TextStyle(fontSize: 25.0,
                                 fontWeight: FontWeight.bold)),
         trailing: Icon(Icons.keyboard_arrow_right),
-        onTap: (){
+        /*onTap: (){
           Navigator.push(context, MaterialPageRoute(builder: (context) => SwitchControl()));
-        },
+        },*/
       ),
       Divider(),
       ListTile(
@@ -101,9 +117,9 @@ Widget _widgetList(BuildContext context){
                 style: TextStyle(fontSize: 25.0,
                                 fontWeight: FontWeight.bold)),
         trailing: Icon(Icons.keyboard_arrow_right),
-        onTap: (){
+        /*onTap: (){
           Navigator.push(context, MaterialPageRoute(builder: (context) => WidgetList()));
-        },
+        },*/
       ),
       Divider(),
     ],
