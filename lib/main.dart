@@ -5,6 +5,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:cupertino_demo/WidgetList.dart';
 import 'package:cupertino_demo/Controls.dart';
 import 'package:cupertino_demo/SwitchControl.dart';
+import 'package:cupertino_demo/Buttons.dart';
 
 
 void main(){
@@ -22,16 +23,7 @@ class CupertinoDemo extends StatelessWidget{
         title: Text('Cupertino Demo')),   
         body: Column(
           children: <Widget>[
-            Padding(
-              padding: const EdgeInsets.all(30.0),
-              child: Text('Cupertino Widgets Demo',
-                   style: TextStyle(fontWeight: FontWeight.bold,
-                                    fontSize: 25.0,
-                                    color: CupertinoColors.darkBackgroundGray),),
-            ),
-            
-            
-            Divider(color: CupertinoColors.black,),
+            Image.asset('assests/flutter_logo.png'),
             Expanded(
               child: CupertinoWidgetList(),
             ),
@@ -93,13 +85,13 @@ Widget _widgetList(BuildContext context){
       ),
       Divider(),
       ListTile(
-        title: Text('Cupertino Page Transition',
+        title: Text('Cupertino Button',
                 style: TextStyle(fontSize: 25.0,
                                 fontWeight: FontWeight.bold)),
         trailing: Icon(Icons.keyboard_arrow_right),
-        /*onTap: (){
-          Navigator.push(context, MaterialPageRoute(builder: (context) => SwitchControl()));
-        },*/
+        onTap: (){
+          Navigator.push(context, MaterialPageRoute(builder: (context) => Buttons()));
+        },
       ),
       Divider(),
       ListTile(
