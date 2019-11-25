@@ -3,3 +3,9 @@ This demo shows Flutter's Cupertino Widgets samples for similar look and fill as
 
 ## ActionSheet
 ![actionsheet](actionsheet.png)
+
+## Picker
+![picker](picker.png)
+
+## DatePicker
+![datepicker](datepicker.png)
